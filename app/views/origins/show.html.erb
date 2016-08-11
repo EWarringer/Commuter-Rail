@@ -17,26 +17,31 @@
   </nav>
 
   <table width='100%' border="2" cellspacing="5" cellpadding="2">
+    <thead>
 
-    <tr id="title">
-      <th>CARRIER</th>
-      <th>TIME</th>
-      <th>DESTINATION</th>
-      <th>TRAIN#</th>
-      <th>TRACK#</th>
-      <th>STATUS</th>
+      <tr id="title">
+        <th>CARRIER</th>
+        <th>TIME</th>
+        <th>DESTINATION</th>
+        <th>TRAIN#</th>
+        <th>TRACK#</th>
+        <th>STATUS</th>
 
-    </tr>
-    <tr>
-    <% @trains.each do |row| %>
-      <td class="board">MBTA</td>
-      <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
-      <td class="board"><%= row.destination.upcase %></td>
-      <td class="board"><%= row.trip.upcase %></td>
-      <td class="board"><%= row.track.upcase %></td>
-      <td id="stat"><%= row.status.upcase %></td>
-    <% end %>
-  </tr>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trains.each do |row| %>
+      <tr>
+          <td class="board">MBTA</td>
+          <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
+          <td class="board"><%= row.destination.upcase %></td>
+          <td class="board"><%= row.trip.upcase %></td>
+          <td class="board"><%= row.track.upcase %></td>
+          <td id="stat"><%= row.status.upcase %></td>
+      </tr>
+      <% end %>
+
+    </tbody>
   </table>
 
   <%= link_to "home", root_path %>
