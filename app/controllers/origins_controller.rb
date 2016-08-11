@@ -17,7 +17,7 @@ class OriginsController < ApplicationController
     @c_time = current[2]
 
     # setting variables to use in the ERB
-    @station = Origin.find_by(id: params[:id])
+    @station = Origin.find(params[:id])
     @trains = @station.trains
     binding.pry
   end

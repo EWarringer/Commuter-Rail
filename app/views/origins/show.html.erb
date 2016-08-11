@@ -16,10 +16,6 @@
     </div>
   </nav>
 
-  <div>
-    <%= @trains[0].destination %>
-  </div>
-
   <table width='100%' border="2" cellspacing="5" cellpadding="2">
     <thead>
 
@@ -34,18 +30,18 @@
       </tr>
     </thead>
     <tbody>
-      <!-- <% @trains.each do |row| %>
-      <tr>
+      <% @trains.each do |row| %>
+      <tr id="title">
 
 
-          <td class="board">MBTA</td>
-          <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
-          <td class="board"><%= row.destination.upcase %></td>
-          <td class="board"><%= row.trip.upcase %></td>
-          <td class="board"><%= row.track.upcase %></td>
-          <td id="stat"><%= row.status.upcase %></td>
+          <td>MBTA</td>
+          <td><%= row.scheduled_time.upcase %></td>
+          <td><%= row.destination.upcase %></td>
+          <td><%= row.trip.upcase %></td>
+          <td><%= row.track.upcase %></td>
+          <td><%= row.status.upcase %></td>
       </tr>
-      <% end %> -->
+      <% end %>
 
     </tbody>
   </table>
