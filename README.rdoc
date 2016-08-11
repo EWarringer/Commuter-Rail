@@ -1,0 +1,29 @@
+Useful files:
+
+* Origins controller (../app/controllers/origins_controller.rb)
+
+
+* Train Model (../app/models/train.rb)
+* CsvSeed Model (../app/models/csv_seed.erb)
+
+
+* Origins show page (../app/views/origins/show.erb)
+* Origins index page (../app/views/origins/index.erb)
+
+
+* Schema (../db/schema.rb)
+
+
+* Routes (../config/routes.rb)
+
+
+Also used:
+
+
+* seeds.rb (in ../db/) to add north and south station to origins to get started
+
+* migrations are in ../db/migrations folder
+
+* origins model to validate its columns and connect to trains
+
+* basic css in ../app/assets/stylesheets/application.css

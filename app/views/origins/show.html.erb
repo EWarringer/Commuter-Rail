@@ -1,0 +1,44 @@
+<!-- show page -->
+<!-- basic table to portray similar format as the real schedule -->
+<!-- little CSS so it's not just a white background -->
+
+<div id="full-board">
+
+  <nav class="header">
+    <div id="station"><%= @station.origin.upcase %> TRAIN INFORMATION</div>
+    <div id="time">
+      <div>CURRENT TIME</div>
+      <div><%= @c_time %></div>
+    </div>
+    <div id="date">
+      <div><%= @c_day.upcase %></div>
+      <div><%= @c_date %></div>
+    </div>
+  </nav>
+
+  <table width='100%' border="2" cellspacing="5" cellpadding="2">
+
+    <tr id="title">
+      <th>CARRIER</th>
+      <th>TIME</th>
+      <th>DESTINATION</th>
+      <th>TRAIN#</th>
+      <th>TRACK#</th>
+      <th>STATUS</th>
+
+    </tr>
+    <% @trains.each do |row| %>
+    <tr>
+      <td class="board">MBTA</td>
+      <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
+      <td class="board"><%= row.destination.upcase %></td>
+      <td class="board"><%= row.trip.upcase %></td>
+      <td class="board"><%= row.track.upcase %></td>
+      <td id="stat"><%= row.status.upcase %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <%= link_to "home", root_path %>
+
+</div>
