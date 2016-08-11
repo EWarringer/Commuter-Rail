@@ -27,8 +27,8 @@
       <th>STATUS</th>
 
     </tr>
+    <tr>
     <% @trains.each do |row| %>
-    
       <td class="board">MBTA</td>
       <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
       <td class="board"><%= row.destination.upcase %></td>
