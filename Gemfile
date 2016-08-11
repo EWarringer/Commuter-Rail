@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'pry'
+gem 'rails_12factor'
+gem 'ruby', '2.0.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
