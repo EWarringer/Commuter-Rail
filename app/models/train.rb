@@ -17,8 +17,9 @@ class Train < ActiveRecord::Base
     # repopulate the postgres database.
     Train.delete_all
     CSV.new(open(url), headers: true, header_converters: :symbol).each do |line|
-      t = CsvSeed.new(line)
 
+      t = CsvSeed.new(line)
+      sleep 1
       Train.create!(
         track: t.track,
         destination: t.destination,
