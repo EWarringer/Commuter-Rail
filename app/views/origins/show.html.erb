@@ -16,6 +16,10 @@
     </div>
   </nav>
 
+  <div>
+    <%= @trains[0].destination %>
+  </div>
+
   <table width='100%' border="2" cellspacing="5" cellpadding="2">
     <thead>
 
@@ -30,17 +34,6 @@
       </tr>
     </thead>
     <tbody>
-
-
-      <tr id="title">
-        <th>CARRIER</th>
-        <th>TIME</th>
-        <th>DESTINATION</th>
-        <th>TRAIN#</th>
-        <th>TRACK#</th>
-        <th>STATUS</th>
-
-      </tr>
       <!-- <% @trains.each do |row| %>
       <tr>
 
