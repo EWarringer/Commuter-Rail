@@ -30,17 +30,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr id="title">
-        <th>CARRIER</th>
-        <th>TIME</th>
-        <th>DESTINATION</th>
-        <th>TRAIN#</th>
-        <th>TRACK#</th>
-        <th>STATUS</th>
 
-      </tr>
-      <!-- <% @trains.each do |row| %>
-      <tr>
+      <!-- <%= @trains %> -->
+      <!-- <tr>
 
 
           <td class="board">MBTA</td>
@@ -49,11 +41,12 @@
           <td class="board"><%= row.trip.upcase %></td>
           <td class="board"><%= row.track.upcase %></td>
           <td id="stat"><%= row.status.upcase %></td>
-      </tr>
+      </tr> -->
       <% end %>
 
-    </tbody> -->
+    </tbody>
   </table>
+  <%= @trains %>
 
   <%= link_to "home", root_path %>
 
