@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 
 module TrainDepartures
   class Application < Rails::Application
-    config.time_zone = 'America/Cancun'
+    config.time_zone = 'America/Detroit'
     config.active_record.default_timezone = :local
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
