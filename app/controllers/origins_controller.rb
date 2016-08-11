@@ -19,7 +19,7 @@ class OriginsController < ApplicationController
     # setting variables to use in the ERB
     @station = Origin.find(params[:id])
 
-    @trains = Train.all
+    @trains = @station.trains.all
     # binding.pry
   end
 end
