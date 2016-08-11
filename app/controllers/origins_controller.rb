@@ -9,7 +9,7 @@ class OriginsController < ApplicationController
     # what is clicked), it will reseed the information to the database
     # to provide the most updated data to the schedule. (see ../app/models/train.rb)
     Train.reseed("http://developer.mbta.com/lib/gtrtfs/Departures.csv")
-
+    sleep 1
     # using the unix time provided in the CSV instead of using the Time constant
     current = Train.first.current_time.split(",")
     @c_day = current[0]
