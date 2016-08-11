@@ -25,7 +25,7 @@ class Train < ActiveRecord::Base
         destination: t.destination,
         status: t.status,
         scheduled_time: t.scheduled_time,
-        origin_id: t.origin == "North Station"? 1 : 2,
+        origin_id: t.origin == "North Station" ? 1 : 2,
         trip: t.trip,
         current_time: t.current_time
       )
