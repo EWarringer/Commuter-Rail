@@ -11,14 +11,13 @@ class OriginsController < ApplicationController
     Train.reseed("http://developer.mbta.com/lib/gtrtfs/Departures.csv")
     sleep 1
     # using the unix time provided in the CSV instead of using the Time constant
-    current = Train.first.current_time.split(",")
-    @c_day = current[0]
-    @c_date = current[1]
-    @c_time = current[2]
+    @current = Train.first.current_time.split(",")
+    @c_day = @current[0]
+    @c_date = @current[1]
+    @c_time = @current[2]
 
     # setting variables to use in the ERB
     @station = Origin.find(params[:id])
     @trains = @station.trains
-    binding.pry
   end
 end

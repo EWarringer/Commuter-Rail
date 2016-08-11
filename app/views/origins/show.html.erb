@@ -31,15 +31,15 @@
     </thead>
     <tbody>
       <% @trains.each do |row| %>
-      <tr id="title">
+      <tr>
 
 
-          <td>MBTA</td>
-          <td><%= row.scheduled_time.upcase %></td>
-          <td><%= row.destination.upcase %></td>
-          <td><%= row.trip.upcase %></td>
-          <td><%= row.track.upcase %></td>
-          <td><%= row.status.upcase %></td>
+          <td class="board">MBTA</td>
+          <td class="board" id="scheduledtime"><%= row.scheduled_time.upcase %></td>
+          <td class="board"><%= row.destination.upcase %></td>
+          <td class="board"><%= row.trip.upcase %></td>
+          <td class="board"><%= row.track.upcase %></td>
+          <td id="stat"><%= row.status.upcase %></td>
       </tr>
       <% end %>
 
