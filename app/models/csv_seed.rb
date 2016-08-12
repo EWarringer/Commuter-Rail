@@ -4,11 +4,12 @@ class CsvSeed
     @train = train
     @trip = train[:trip]
     @destination = train[:destination]
-    @current_time = Time.at(train[:timestamp].to_i).strftime("%A,%m-%d-%Y,%l:%M %p")
+    @current_time = Time.at(@train[:timestamp].to_i - 14400).strftime("%A,%m-%d-%Y,%l:%M %p")
     @origin = train[:origin]
-    @scheduled_time = Time.at(train[:scheduledtime].to_i).strftime("%l:%M %p")
+    @scheduled_time = Time.at(@train[:scheduledtime].to_i - 14400).strftime("%l:%M %p")
     @track = train[:track].nil? ? "TBD" : train[:track]
   end
+
   def status
     if @train[:lateness].to_i > 0
       minutes = @train[:lateness].to_i/60
