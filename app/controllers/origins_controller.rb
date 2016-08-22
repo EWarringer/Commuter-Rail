@@ -1,4 +1,5 @@
 class OriginsController < ApplicationController
+
   def index
     # variable for index page (../app/views/origins/index.erb)
     @stations = Origin.all
@@ -19,4 +20,5 @@ class OriginsController < ApplicationController
     @station = Origin.find(params[:id])
     @trains = @station.trains
   end
+
 end
