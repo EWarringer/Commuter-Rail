@@ -2,9 +2,9 @@ require 'csv'
 require 'open-uri'
 
 class Train < ActiveRecord::Base
-  # made basic relation between train and origin
-  # train belongs(destination) belongs to a station(origin)
-  # while an origin has many trains/destinations.
+  # Made basic relation between train and origin
+  # Train belongs to a station(origin)
+  # Origin has many trains/destinations.
   validates :trip, presence: true
   validates :track, presence: true
   validates :destination, presence: true
