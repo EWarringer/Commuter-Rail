@@ -1,8 +1,14 @@
 <!-- embedded ruby that displays one link to the north station schedule
 and ont to the south station schedule -->
+<body class="old_stations">
 
-<div id='indexlinks'>
-<% @stations.each do |station| %>
-  <a href="/origins/<%= station.id.to_s %>"><%= station.origin %></a> <br><br>
-<% end %>
-</div>
+  <div id='center'>
+    <% @stations.each do |station| %>
+    <div id='stationlinks'>
+      <a href="/origins/<%= station.id.to_s %>"><%= station.origin %></a> <br><br>
+    </div>
+    <% end %>
+  </div>
+
+
+</body>
