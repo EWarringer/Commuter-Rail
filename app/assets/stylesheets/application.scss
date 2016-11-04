@@ -10,7 +10,6 @@ Some very makeshift CSS just to get some color in there for now
 
 .old_stations {
   background: image-url(vintage) no-repeat center center fixed;
-  background-repeat: repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -18,7 +17,7 @@ Some very makeshift CSS just to get some color in there for now
 }
 
 .station_up {
-  background: image-url(station) no-repeat center center fixed;
+  background: image-url(souths) no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -38,7 +37,7 @@ nav {
   font-size: 0;
   content: " ";
   clear: both;
-  width: 100%;
+  width: 50%;
   height: 0;
 }
 .header { display: inline-block; }
@@ -46,9 +45,17 @@ nav {
 .header {display: block; }
 
 #full-board {
+  width: 80%;
   background-color: #111111;
   border-radius:10px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 .board, #date, #time {
   font: courier;
@@ -61,16 +68,17 @@ nav {
 
 #date {
   float: left;
-  font-size:16pt;
+  font-size:10pt;
 }
 
 #time {
   float: right;
-  font-size:16pt;
+  font-size:12pt;
 }
 
 table {
-  background: #111111
+
+  font-size:10pt;
 }
 
 #scheduledtime {
@@ -92,9 +100,7 @@ table {
   padding: 0;
   margin-top: 0;
   display: inline;
-  text-align: center;
-  font-size:16pt;
-  margin-left: 100px;
+  font-size:15pt;
   font-family: copperplate;
 }
 
@@ -142,7 +148,7 @@ a:hover {
 }
 
 a{
-  color: darkred;
-  font-size: 50pt;
+  color: #d5e2ea;
+  font-size: 25pt;
   font-family: copperplate;
 }
