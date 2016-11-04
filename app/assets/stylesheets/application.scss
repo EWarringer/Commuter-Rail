@@ -10,12 +10,20 @@ Some very makeshift CSS just to get some color in there for now
 
 .old_stations {
   background: image-url(vintage) no-repeat center center fixed;
+  background-repeat: repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
+.station_up {
+  background: image-url(station) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 /*html {
   background-color: darkcyan;
 }*/
@@ -93,10 +101,18 @@ table {
 
 #stationlinks a:first-child {
   color: #f5ff7f;
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(255,0,0,0) , black, rgba(255,0,0,0) ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255,0,0,0) , black, rgba(255,0,0,0) ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255,0,0,0) , black, rgba(255,0,0,0) );
   background: linear-gradient(rgba(255,0,0,0) ,  black , rgba(255,0,0,0) );
 }
 #stationlinks:last-child a{
   color: #4f5386;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(255,0,0,0) , white, rgba(255,0,0,0) ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255,0,0,0) , white, rgba(255,0,0,0) ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255,0,0,0) , white, rgba(255,0,0,0) );
   background: linear-gradient(rgba(255,0,0,0) , white, rgba(255,0,0,0) );
 }
 
