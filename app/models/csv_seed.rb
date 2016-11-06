@@ -8,9 +8,9 @@ class CsvSeed
     @train = train
     @trip = train[:trip]
     @destination = train[:destination]
-    @current_time = Time.at(@train[:timestamp].to_i - 14400).strftime("%A,%m-%d-%Y,%l:%M %p")
+    @current_time = Time.at(@train[:timestamp].to_i - 18000).strftime("%A,%m-%d-%Y,%l:%M %p")
     @origin = train[:origin]
-    @scheduled_time = Time.at(@train[:scheduledtime].to_i - 14400).strftime("%l:%M %p")
+    @scheduled_time = Time.at(@train[:scheduledtime].to_i - 18000).strftime("%l:%M %p")
     @track = train[:track].nil? ? "TBD" : train[:track]
   end
 
