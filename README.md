@@ -1,5 +1,5 @@
 # Commuter-Rail
-##### http://quick-boston-outbound.herokuapp.com/
+##### http://quickbound.herokuapp.com/
 ___
 
 ### A useful web app for the commuter... community
